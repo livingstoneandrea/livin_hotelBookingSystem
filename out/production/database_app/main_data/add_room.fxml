@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.93" prefHeight="602.0" prefWidth="465.0" style="-fx-background-color: #232f3e;;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_data.AddRoomController">
+   <children>
+      <ComboBox fx:id="room_type" layoutX="137.0" layoutY="219.0" prefHeight="35.0" prefWidth="218.0" promptText=" Choose  room type" />
+      <ComboBox fx:id="rates" layoutX="137.0" layoutY="268.0" prefHeight="35.0" prefWidth="218.0" promptText="Rates" />
+      <ComboBox fx:id="room_capacity" layoutX="135.0" layoutY="375.0" prefHeight="35.0" prefWidth="218.0" promptText="choose room capacity" />
+      <Button fx:id="add_roomBtn" layoutX="137.0" layoutY="484.0" mnemonicParsing="false" onAction="#addRoom" prefHeight="46.0" prefWidth="218.0" text="submit" />
+      <Label layoutX="159.0" layoutY="102.0" text="Add new rooms" textFill="#eee5e5">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="room_loc" layoutX="137.0" layoutY="318.0" prefHeight="35.0" prefWidth="218.0" />
+      <Label fx:id="close_dialog" layoutX="430.0" layoutY="14.0" onMouseClicked="#closeDialog" prefHeight="36.0" prefWidth="21.0" text="x" textFill="#d7d3d3">
+         <font>
+            <Font size="34.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

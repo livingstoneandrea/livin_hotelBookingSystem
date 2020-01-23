@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Pane" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #232f3e;;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main_data.Main_appController">
+   <children>
+      <Pane layoutX="-3.0" prefHeight="720.0" prefWidth="210.0" style="-fx-background-color: #330000;;">
+         <children>
+            <ImageView fitHeight="85.0" fitWidth="103.0" layoutX="57.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="14.0" layoutY="127.0" text="Name" textFill="#f2e6e6">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label layoutX="85.0" layoutY="131.0" text="Username@example" textFill="#f5eaea" />
+            <Label layoutX="18.0" layoutY="177.0" text="Rank" textFill="#f2ecec">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label layoutX="105.0" layoutY="181.0" text="Admin" textFill="#f2ecec" />
+            <Label fx:id="home_link" alignment="CENTER" layoutX="4.0" layoutY="250.0" onMouseClicked="#transitScene" prefHeight="42.0" prefWidth="200.0" styleClass="nav_link" stylesheets="@./main_app.css" text="Home" textFill="#f2ecec">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label fx:id="room_link" alignment="CENTER" layoutY="294.0" onMouseClicked="#transitScene" prefHeight="42.0" prefWidth="210.0" styleClass="nav_link" stylesheets="@./main_app.css" text="Rooms" textFill="#f2ecec">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label alignment="CENTER" layoutY="419.0" prefHeight="51.0" prefWidth="210.0" styleClass="nav_link" stylesheets="@./main_app.css" text="Accounts" textFill="#f2ecec">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+            <Label layoutX="82.0" layoutY="490.0" text="settingss" textFill="#f2ecec" />
+            <Label fx:id="guest_link" alignment="CENTER" layoutX="5.0" layoutY="340.0" onMouseClicked="#transitScene" prefHeight="42.0" prefWidth="200.0" styleClass="nav_link" stylesheets="@./main_app.css" text="Guests" textFill="#f2ecec">
+               <font>
+                  <Font size="20.0" />
+               </font></Label>
+         </children>
+      </Pane>
+      <Pane layoutX="209.0" prefHeight="66.0" prefWidth="0.0" style="-fx-background-color: #f9f9f9;;">
+         <children>
+            <Label layoutX="14.0" layoutY="9.0" text="Noble  Hotel" textFill="#ebebf2">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="615.0" layoutY="678.0" text="Developed By  l@programmerLivin" textFill="#f2ebeb" />
+      <Label layoutX="944.0" layoutY="39.0" text="BreadCrumb/&gt;&gt;" textFill="#f8f6c2" />
+      <StackPane prefHeight="150.0" prefWidth="200.0" />
+      <Pane fx:id="home_page" layoutX="214.0" layoutY="108.0" prefHeight="570.0" prefWidth="988.0" style="-fx-background-color: #ffffff;;" visible="false">
+         <children>
+            <Label layoutX="460.0" layoutY="441.0" text="Main section" />
+            <Pane layoutX="165.0" layoutY="14.0" prefHeight="106.0" prefWidth="658.0" style="-fx-background-color: #f7f7f7;;">
+               <children>
+                  <Label fx:id="add_roomlbl" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" layoutX="73.0" layoutY="16.0" onMouseClicked="#insertRoom" prefHeight="74.0" prefWidth="109.0" style="-fx-background-color: #000033;" styleClass="nav_top" stylesheets="@main_app.css" text=" Add room" textAlignment="JUSTIFY" textFill="#f8f4f4" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" layoutX="498.0" layoutY="16.0" prefHeight="74.0" prefWidth="109.0" style="-fx-background-color: #000033;" styleClass="nav_top" stylesheets="@main_app.css" text="About Developer" textAlignment="JUSTIFY" textFill="#f8f4f4" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" layoutX="364.0" layoutY="16.0" prefHeight="74.0" prefWidth="109.0" style="-fx-background-color: #000033;" styleClass="nav_top" stylesheets="@main_app.css" text="Label" textAlignment="JUSTIFY" textFill="#f8f4f4" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" layoutX="209.0" layoutY="16.0" onMouseClicked="#insertGuest" prefHeight="74.0" prefWidth="109.0" style="-fx-background-color: #000033;" styleClass="nav_top" stylesheets="@main_app.css" text="Add new Guest" textAlignment="JUSTIFY" textFill="#f8f4f4" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Label fx:id="room_nolbl" alignment="CENTER" layoutX="179.0" layoutY="220.0" prefHeight="179.0" prefWidth="179.0" style="-fx-background-color: #ffffff; -fx-border-width: 8px; -fx-border-radius: 50%;;" styleClass="border_round" stylesheets="@main_app.css" text="Rooms " textAlignment="JUSTIFY" textFill="#28e4e8" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="WAIT" />
+               </cursor>
+            </Label>
+            <Label fx:id="guest_nolbl" alignment="CENTER" layoutX="405.0" layoutY="223.0" prefHeight="179.0" prefWidth="179.0" style="-fx-background-color: #ffffff; -fx-border-width: 8px; -fx-border-radius: 50%;;" styleClass="border_round" stylesheets="@main_app.css" text="Guests" textAlignment="JUSTIFY" textFill="#28e4e8" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <Label fx:id="vacc_roomlbl" alignment="CENTER" layoutX="630.0" layoutY="223.0" prefHeight="179.0" prefWidth="179.0" style="-fx-background-color: #ffffff; -fx-border-width: 8px; -fx-border-radius: 50%;;" styleClass="border_round" stylesheets="@main_app.css" text="Booked" textAlignment="JUSTIFY" textFill="#28e4e8" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="room_pane" layoutX="230.0" layoutY="117.0" prefHeight="538.0" prefWidth="886.0">
+         <children>
+            <TableView fx:id="rooms_table" layoutX="47.0" layoutY="101.0" opacity="0.4" prefHeight="404.0" prefWidth="667.0" style="-fx-background-color: #000033;">
+              <columns>
+                <TableColumn fx:id="room_id" prefWidth="75.0" text="Room no" />
+                <TableColumn fx:id="roomType" prefWidth="97.0" text="room type" />
+                <TableColumn fx:id="rates" prefWidth="136.0" text="rates" />
+                <TableColumn fx:id="room_loc" prefWidth="146.0" text="room location" />
+                <TableColumn fx:id="room_cap" prefWidth="98.0" text="room capacity" />
+                <TableColumn fx:id="status" prefWidth="110.0" text="status" />
+              </columns>
+            </TableView>
+            <Button fx:id="add_roomBtn" layoutX="749.0" layoutY="118.0" mnemonicParsing="false" onAction="#insertRoom" prefHeight="59.0" prefWidth="109.0" styleClass="btn_effects" stylesheets="@main_app.css" text="Add new room" />
+            <Button fx:id="del_roomBtn" layoutX="749.0" layoutY="212.0" mnemonicParsing="false" onAction="#deleteRoom" prefHeight="59.0" prefWidth="109.0" styleClass="btn_effects" stylesheets="@main_app.css" text="Delete a  room" />
+            <Button fx:id="backup_btn" layoutX="750.0" layoutY="303.0" mnemonicParsing="false" onAction="#backup_Db" prefHeight="59.0" prefWidth="109.0" styleClass="btn_effects" stylesheets="@main_app.css" text="Back up the data" />
+            <Button fx:id="restore_btn" layoutX="749.0" layoutY="399.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="109.0" styleClass="btn_effects" stylesheets="@main_app.css" text="Restore the  data" />
+            <ComboBox fx:id="room_filterCombo" layoutX="47.0" layoutY="25.0" prefHeight="35.0" prefWidth="179.0" promptText="Filter by ....." />
+            <TextField fx:id="filterRtxtfield" layoutX="483.0" layoutY="25.0" onAction="#filterRoomTable" prefHeight="35.0" prefWidth="179.0" promptText="Enter search text ..." />
+            <Button layoutX="662.0" layoutY="25.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="59.0" text="Search" />
+            <Button fx:id="update_btn" layoutX="297.0" layoutY="30.0" mnemonicParsing="false" onAction="#loadRoomsData" prefHeight="35.0" prefWidth="109.0" text="update data" />
+         </children>
+      </Pane>
+      <Button fx:id="close_btn" layoutX="1145.0" layoutY="21.0" mnemonicParsing="false" onAction="#close_application" prefHeight="25.0" prefWidth="35.0" style="-fx-border-radius: 50%; -fx-cursor: hand; -fx-background-color: transparent;" text="X" textFill="#f5f3f3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button layoutX="1087.0" layoutY="21.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="35.0" style="-fx-border-radius: 50%; -fx-cursor: hand; -fx-background-color: transparent;" text="-" textFill="#f5f3f3">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Separator layoutX="243.0" layoutY="82.0" prefHeight="5.0" prefWidth="815.0" />
+      <Pane fx:id="guest_pane" layoutX="227.0" layoutY="149.0" prefHeight="495.0" prefWidth="975.0" visible="false">
+         <children>
+            <TableView fx:id="guest_table" layoutX="190.0" layoutY="197.0" opacity="0.4" prefHeight="242.0" prefWidth="538.0" style="-fx-background-color: #232f3e;;">
+              <columns>
+                <TableColumn fx:id="guest_id" prefWidth="75.0" text="guest_id" />
+                <TableColumn fx:id="guest_name" prefWidth="100.0" text="guest_name" />
+                <TableColumn fx:id="guest_email" prefWidth="112.0" text="Email address" />
+                <TableColumn fx:id="guest_phone" prefWidth="100.0" text="Phone no" />
+                <TableColumn fx:id="guest_city" minWidth="5.0" prefWidth="72.0" text="City" />
+                <TableColumn fx:id="guest_state" minWidth="5.0" prefWidth="72.0" text="state" />
+              </columns>
+            </TableView>
+            <Button layoutX="828.0" layoutY="248.0" mnemonicParsing="false" onAction="#deleteGuest" prefHeight="51.0" prefWidth="109.0" text="Delete guest" />
+            <Button layoutX="828.0" layoutY="309.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="109.0" text="Update guest" />
+            <Button layoutX="828.0" layoutY="376.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="109.0" text="Buckup the data" />
+            <Button layoutX="828.0" layoutY="185.0" mnemonicParsing="false" onAction="#insertGuest" prefHeight="51.0" prefWidth="109.0" text="Add new guest" />
+            <Button layoutX="670.0" layoutY="122.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="52.0" text="Button" />
+            <TextField fx:id="search_guests" layoutX="512.0" layoutY="122.0" onAction="#filterGuestTable" prefHeight="35.0" prefWidth="158.0" promptText="Enter search text here ..." />
+            <ComboBox layoutX="184.0" layoutY="122.0" prefHeight="35.0" prefWidth="200.0" promptText="Filter by ....." />
+            <Label layoutX="352.0" layoutY="51.0" text="redifining hospitallity" textFill="#eee3e3">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <Button fx:id="load_guestBtn" layoutX="28.0" layoutY="296.0" mnemonicParsing="false" onAction="#loadGuestInfo" prefHeight="51.0" prefWidth="135.0" text="load data" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="database_app">
+    <output-path>$PROJECT_DIR$/out/artifacts/database_app</output-path>
+    <root id="root">
+      <element id="archive" name="database_app.jar">
+        <element id="module-output" name="database_app" />
+      </element>
+    </root>
+  </artifact>
+</component>

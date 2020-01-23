@@ -1,0 +1,28 @@
+.nav_link:hover{
+    -fx-background-color:#fff4ac;
+    -fx-text-fill:#000000;
+    -fx-cursor:hand;
+
+}
+.nav_top:hover{
+    -fx-background-color:#fff4ac;
+    -fx-fill:#f1f1f1;
+    -fx-cursor:hand;
+
+}
+.nav_link:active{
+    -fx-background-color:#f1f1f1;
+}
+.border_round{
+   -fx-border-radius:50%;
+   -fx-border-color:#800000;
+   -fx-border-size:8px;
+   -fx-text-alignement:center;
+   -fx-text-wrap:wrap;
+
+}
+.btn_effects:hover{
+    -fx-background-color:#330000;
+    -fx-text-fill:#f1f1f1;
+
+}
